@@ -3,6 +3,7 @@ import Logo from '@/public/logo.svg';
 import Logo_2 from '@/public/logo_2.svg';
 import Logo_3 from '@/public/logo_3.svg';
 import { Menu } from "lucide-react";
+import Link from "next/link";
 
 const Index = () => {
   return (
@@ -42,9 +43,19 @@ const Index = () => {
             </div>
             <div className="flex flex-col lg:flex-row justify-between">
               <div className="flex items-start justify-between">
-                <p className="text-white text-[12px] font-gotham font-light underline cursor-pointer lg:text-[14px] lg:text-left lg:mb-0">
-                  Instagram<br /> LinkedIn
-                </p>
+                <div className="flex flex-col"> 
+
+                  <div>
+                    <Link className="text-white text-[12px] font-gotham font-light underline cursor-pointer lg:text-[14px] lg:text-left lg:mb-0" href={{ pathname: 'https://www.instagram.com/antonello.studio/' }}>
+                      Instagram
+                    </Link>
+                  </div>
+                  <div>
+                    <Link className="text-white text-[12px] font-gotham font-light underline cursor-pointer lg:text-[14px] lg:text-left lg:mb-0" href={{ pathname: 'https://www.linkedin.com/company/74733349/admin/feed/posts/' }}>
+                      LinkedIn
+                    </Link>
+                  </div>
+                </div>
                 <p className="text-white text-[12px] lg:text-[14px] font-gotham font-light underline cursor-pointer lg:hidden lg:text-left">
                   We are hiring
                 </p>
